@@ -1,4 +1,6 @@
 # optical-character-recognition
+# brannch: dev-vijju
+
 A simple OCR model for 26 alphabetic and 10 numeric characcters
 
 Dataset used - the 'older version' dataset from the source https://www.kaggle.com/datasets/preatcher/standard-ocr-dataset
