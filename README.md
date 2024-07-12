@@ -13,3 +13,6 @@ pytorch,
 numpy, 
 matplotlib, 
 CUDA version compatible with specific GPU
+
+# Results
+Accuracy acheived - 84.72%
