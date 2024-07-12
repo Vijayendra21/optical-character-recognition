@@ -4,22 +4,17 @@ import torch.nn.functional as F
 class myOCRModel(nn.Module):
     def __init__(self, num_classes):
         super(myOCRModel, self).__init__()
-        #input shape - (4,1,128,128)
         self.conv1 = nn.Conv2d(1, 32, kernel_size=3, padding=1, stride=1)
         self.bn1 = nn.BatchNorm2d(32)
         
-        #input shape - (4,32,65,65)
         self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1, stride=1)
         self.bn2 = nn.BatchNorm2d(64)
         
-        #input shape - (4,64,65,65)
         self.conv3 = nn.Conv2d(64, 128, kernel_size=3, padding=1, stride=1)
         self.bn3 = nn.BatchNorm2d(128)
 
-        #input shape - (4,128,65,65)
         self.pool = nn.MaxPool2d(kernel_size=2)
         
-        #input shape - (4,128,32,32)
         self.dropout = nn.Dropout(0.4)
         self.fc1 = nn.Linear(128*16*16, 1024)
         self.fc2 = nn.Linear(1024, 2048)
