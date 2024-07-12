@@ -11,7 +11,7 @@ Dataset used - the 'older version' dataset from the source https://www.kaggle.co
 3. Run the training-model.ipynb notebook to train the model and save it if neccessary with the last line thats commented out
 
 # Requirements
-pytorch
-numpy
-matplotlib
+pytorch, 
+numpy, 
+matplotlib, 
 CUDA version compatible with specific GPU
